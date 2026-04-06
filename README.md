@@ -55,7 +55,7 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 
 ### Optional : Adjust Full-Screen Settings
 - Edit "MPCJF.ps1" located in ``` C:\ProgramData\MPC-JF ```
-- At the end of the script, remove or readd ```/fullscreen```
+- At the end of the script, remove or re-add ```/fullscreen```
 
 ### 7. Done !
 - Restart your web browser and/or refresh Jellyfin Web UI, test if it works already. If not, see Workaround below.

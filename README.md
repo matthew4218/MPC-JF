@@ -20,14 +20,11 @@ Download **latest for Jellyfin 10.11.+** : [MPC-JF.zip](https://github.com/Damoc
 - Edit the file `MPCJF.ps1` and replace the path ***in the last line*** with ***your own*** corresponding path. (MPC-HC or any other player path)
 - E.g. for PotPlayer default path : ``` & "C:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe" "`"$path`"" ```
 
-### 3. Install ViolentMonkey
+### 3. Installation for Web Browser (Recommended)
 - In your web browser, install ViolentMonkey extension :
 https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 	###### Alternatively you can use TamperMonkey or any userscript extension
-	###### MPCJF.js can be put in Jellyfin JavaScript Injector plugin instead, but every play buttons in Jellyfin Web won't work anywhere else without MPC-JF.
-
-### 4. Install MPCJF .js userscript in ViolentMonkey
-- Install the .js into ViolentMonkey, one-click install with auto-update : [MPCJF.user.js](https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPCJF.user.js)
+- Install MPCJF.user.js into ViolentMonkey, one-click install with auto-update : [MPCJF.user.js](https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPCJF.user.js)
 - If your Jellyfin Server is not set the default adress ``` http://localhost:8096/ ``` : Select **Modify** to replace ``` http://localhost:8096/ ``` with your Jellyfin web URL, for exemple :
   ```
   // @match        http://192.168.1.10:8096/*
@@ -35,6 +32,21 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 	##### - Don't forget the * at the end.
 	##### - To allow modifications, and so it doesn’t get overwritten if I update this script, uncheck Allow Updates & Allow Modification.
 	###### To find and modify the installed `MPCJF.user.js` Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** > ***`</>`***
+	
+### 3bis. (optional) and/or : Installation for Jellyfin Media Player (JMP Desktop Windows App)
+- Install the **[JavaScript Injector plugin](https://github.com/n00bcodr/Jellyfin-JavaScript-Injector)** on your Jellyfin server if it is not already installed. A server restart may be required.
+- Go to: Jellyfin admin Dashboard => **Dashboard => JS Injector => Add Script**
+- Name it MPCJF or whatever, then copy/paste the entire `MPC-JF-JSinjector-deviceID.js` script.
+- On the Windows PC where **Jellyfin Media Player** is installed, go to: `C:\Users\YourUserName\AppData\Local\JellyfinMediaPlayer\logs\`
+- Open `JellyfinMediaPlayer.log` with Notepad.
+- Press `Ctrl + F` and search for: `deviceId: `
+- You should find a line containing `deviceId:` `*long random string*`
+- Copy just that `long random string`
+- Go back to your script in: **Dashboard => JS Injector**
+- Paste/Replace: `PUT_DEVICE_ID_HERE` with your copied JMP `deviceId`.
+- Click **Enabled**, then click **Save**.
+
+##### Notes : If you do not find `deviceId:` or the one you copy/paste is not working, close and reopen/reconnect Jellyfin Media Player, then reopen the log file and search again at the bottom.
 
 ### 5. Enable PowerShell Scripts Execution to allow MPCJF.ps1
 - In Windows 11, go to, Settings → Developers → PowerShell → Allow unsigned scripts
@@ -52,7 +64,7 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 - Run `MPCJF.reg` and confirm changes.
 - You may need to re-run `MPCJF.reg` after major MPC Updates.
 
-### Optionnal :  Hide the Powerscript window at MPC-JF launch
+### Optional :  Hide the Powerscript window at MPC-JF launch
 - `Install-MPCJF-HiddenProtocol.ps1` must be in your default MPC-JF folder.
 - It **require VBScript** installed (may not be installed by default on all Windows 11 installation)
 - Run the file `Install-MPCJF-HiddenProtocol.ps1` (Right click and ***Run with PowerShell***)

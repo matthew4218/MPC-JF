@@ -2,8 +2,8 @@
 // @name         MPC-JF - MPC launcher for Jellyfin
 // @namespace    https://github.com/Damocles-fr/MPC-JF/
 // @version      10.11
-// @updateURL    https://github.com/Damocles-fr/MPC-JF/raw/main/MPC-JF/MPC-JF.js
-// @downloadURL  https://github.com/Damocles-fr/MPC-JF/raw/main/MPC-JF/MPC-JF.js
+// @updateURL    https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPC-JF.js
+// @downloadURL  https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPC-JF.js
 // @description  Intercept Play/Resume clicks in Jellyfin to launch medias with the MPC-JF.ps1 script
 // @author       Damocles-fr
 // @match        http://localhost:8096/*

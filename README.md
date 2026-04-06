@@ -16,7 +16,7 @@ Download **latest for Jellyfin 10.11.+** : [MPC-JF.zip](https://github.com/Damoc
   ```
 - You should end up with: `C:\ProgramData\MPC-JF\` (with all files inside).
 
-### 2 : If you don't use ***MPC-BE*** and his default path :
+### 2. If you don't use ***MPC-BE*** and his default path :
 - Edit the file `MPCJF.ps1` and replace the path ***in the last line*** with ***your own*** corresponding path. (MPC-HC or any other player path)
 - E.g. for PotPlayer default path : ``` & "C:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe" "`"$path`"" ```
 
@@ -33,20 +33,20 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 	##### - To allow modifications, and so it doesn’t get overwritten if I update this script, uncheck Allow Updates & Allow Modification.
 	###### To find and modify the installed `MPCJF.user.js` Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** > ***`</>`***
 	
-### 3bis. (optional) : Installation for Jellyfin Media Player (JMP Desktop Windows App)
+### 4. (optional) : Installation for Jellyfin Media Player (JMP Desktop Windows App)
 - Install the **[JavaScript Injector plugin](https://github.com/n00bcodr/Jellyfin-JavaScript-Injector)** on your Jellyfin server if it is not already installed. A server restart may be required.
 - Go to: Jellyfin => **Admin Dashboard => JS Injector => Add Script**
 - Name it MPCJF or whatever, then copy/paste the entire `MPC-JF-JSinjector-deviceID.js` script.
-- On the PC where **Jellyfin Media Player** is installed, go to your corresponding `C:\Users\YourUserName\AppData\Local\JellyfinMediaPlayer\logs\`
+- On the PC, go to your corresponding `C:\Users\YourUserName\AppData\Local\JellyfinMediaPlayer\logs\`
 - Open `JellyfinMediaPlayer.log` with Notepad.
 - Press `Ctrl + F` and search for: `deviceId: ` (preferably at the bottom)
-- You should find a line containing `deviceId:` `long random string`
-- Copy just that `long random string`
+- You should find a line containing `deviceId:` `LongRandomString`
+- Copy just that `LongRandomString`
 - Go back to your script in: **Dashboard => JS Injector**
 - Paste/Replace: `PUT_DEVICE_ID_HERE` with your `long random string` device Id.
 - Click **Enabled**, then click **Save**.
 
-##### Notes : If you do not find `deviceId:` or the one you copy/paste is not working, close and reopen/reconnect Jellyfin Media Player, then reopen the log file and search again at the bottom.
+###### Notes : If you do not find `deviceId:` or the one you copy/paste is not working, close and reopen/reconnect Jellyfin Media Player, then reopen the log file and search again at the bottom.
 
 ### 5. Enable PowerShell Scripts Execution to allow MPCJF.ps1
 - In Windows 11, go to, Settings → Developers → PowerShell → Allow unsigned scripts
@@ -98,6 +98,7 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 ### Troubleshooting :
 - Sometimes if it stop working, because of idk, **MPC updates** or some specific settings change, just **re-run** `MPCJF.reg` (& `Install-MPCJF-HiddenProtocol.ps1`).
 - If you change your server adress : modify the installed **MPCJF** userscript : Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** → MPC-JF ***`</>`***
+- If Jellyfin removed or changed you JMP deviceId : re-do step 4.
 - If MPC takes time to launch the media, it's because HDDs are in standby and MPC is waiting for them to respond. I have made a tiny watcher that wake up my NAS HDDs at JF Home screen for faster first play here : 
 [jellyfin-nas-hdd-spinup](https://github.com/Damocles-fr/jellyfin-nas-hdd-spinup)
 - To uninstall `Install-MPCJF-HiddenProtocol.ps1` : run in Powershell :

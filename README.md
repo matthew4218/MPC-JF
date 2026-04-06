@@ -97,6 +97,8 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 ---
 
 ### TIPS :
+- You will have to checkmark the media as watched in Jellyfin yourself...
+- To Resume watching the last media, set your Player settings to resume the last file automatically at openning (and open the player instead of jellyfin to resume).
 - Sometimes if it stop working, because of idk, **MPC updates** or some specific settings change, just **re-run** `MPCJF.reg` (& `Install-MPCJF-HiddenProtocol.ps1`).
 - If you change your server adress : modify the installed **MPCJF** userscript : Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** → MPC-JF ***`</>`***
 - If Jellyfin removed or changed you JMP deviceId : re-do step 4.
@@ -107,7 +109,6 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
      Remove-Item -Recurse -Force "HKCU:\Software\Classes\MPCJF" -ErrorAction SilentlyContinue
      Remove-Item -Recurse -Force (Join-Path $env:LOCALAPPDATA "MPCJF") -ErrorAction SilentlyContinue
      ```
-- The .js userscript can be put in Jellyfin JavaScript Injector plugin instead, but every play buttons in Jellyfin Web won't work anywhere else without MPC and MPC-JF.
 - If you use the Firefox extension ``` Dark Reader ``` , it breaks Jellyfin pictures loading in browsers, desactivate it only for jellyfin : Go into Dark Reader settings while you have the Jellyfin page open (firefox menu bar), click to  Jellyfin URL.
 - Here is my guide with many **quality-of-life improvements** for using Jellyfin in a Web browser (auto-start server, fullscreen UI, shortcuts folders links, etc.) : [PPFJ](https://github.com/Damocles-fr/PPJF/)
 

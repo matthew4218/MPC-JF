@@ -13,8 +13,8 @@ Download **latest for Jellyfin 10.11.+** : [MPC-JF.zip](https://github.com/Damoc
 - You should end up with: `C:\ProgramData\MPC-JF\` (with all files inside).
 
 ### 2 : If you don't use ***MPC-BE*** and his default path :
-- Edit the file `MPCJF.ps1` and replace the path ***in the last line*** with ***your own*** MPC.exe paths
-- E.g. for MPC-BE default path : ``` & "C:\Program Files\MPC-BE\mpc-be64.exe" "`"$path`""/fullscreen ```
+- Edit the file `MPCJF.ps1` and replace the path ***in the last line*** with ***your own*** corresponding path. (MPC-HC or any other player path)
+- E.g. for PotPlayer default path : ``` & "C:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe" "`"$path`"" ```
 
 ### 3. Install ViolentMonkey
 - In your web browser, install ViolentMonkey extension :

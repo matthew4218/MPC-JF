@@ -23,13 +23,14 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 ###### MPCJF.js can be put in Jellyfin JavaScript Injector plugin instead, but every play buttons in Jellyfin Web won't work anywhere else without MPC-JF.
 
 ### 4. Install MPCJF.js userscript in ViolentMonkey
-- Install MPCJF.js into ViolentMonkey, one click install link : [MPCJF.js](https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPCJF.js)
+- Install MPCJF.js into ViolentMonkey, one-click install with auto-update : [MPCJF.js Userscript](https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPCJF.js)
 - If your Jellyfin Server is not set the default adress ``` http://localhost:8096/ ``` : edit `MPCJF.js` to replace ``` http://localhost:8096/ ``` with your Jellyfin web URL, for exemple :
   ```
   // @match        http://192.168.1.10:8096/*
   ```
 #### Don't forget the * at the end.
-###### To find the installed `MPCJF.js` Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** > ***`</>`***
+##### If you did any change, Uncheck Allow Updates & Allow Modification so you don't have to do it again if I update this script.
+###### To find and modify the installed `MPCJF.js` Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** > ***`</>`***
 
 ### 5. Enable PowerShell Scripts Execution to allow MPCJF.ps1
 - In Windows 11, go to, Settings → Developers → PowerShell → Allow unsigned scripts
@@ -47,9 +48,6 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 - Run `MPCJF.reg` and confirm changes.
 - You may need to re-run `MPCJF.reg` after major MPC Updates.
 
-### 7. Done !
-- Refresh Jellyfin Web UI and you can test if it works already. If not, see Workaround below.
-
 ### Optionnal :  Hide the Powerscript window at MPC-JF launch
 - `Install-MPCJF-HiddenProtocol.ps1` must be in your default MPC-JF folder.
 - It **require VBScript** installed (may not be installed by default on all Windows 11 installation)
@@ -57,7 +55,10 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 
 ### Optional : Adjust Full-Screen Settings
 - Edit "MPCJF.ps1" located in ``` C:\ProgramData\MPC-JF ```
-- At the end of the script, remove or add ```/fullscreen```
+- At the end of the script, remove or readd ```/fullscreen```
+
+### 7. Done !
+- Refresh Jellyfin Web UI and you can test if it works already. If not, see Workaround below.
 
 ---
 
@@ -86,18 +87,18 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 
 ---
 
-#### TIPS :
-- Sometimes if it stop working, because of idk, **MPC updates** or some specific settings change, just **re-run** `MPCJF.reg` & `Install-MPCJF-HiddenProtocol.ps1`.
-- If MPC takes time to launch, it's because HDDs are in standby, the script is waiting for your HDD to respond. I have made a tiny watcher that wake up my NAS HDDs at JF Home screen for faster first play here : 
+#### Troubleshooting :
+- Sometimes if it stop working, because of idk, **MPC updates** or some specific settings change, just **re-run** `MPCJF.reg` (& `Install-MPCJF-HiddenProtocol.ps1`).
+- If MPC takes time to launch the media, it's because HDDs are in standby, the script is waiting for your HDD to respond. I have made a tiny watcher that wake up my NAS HDDs at JF Home screen for faster first play here : 
 [jellyfin-nas-hdd-spinup](https://github.com/Damocles-fr/jellyfin-nas-hdd-spinup)
 - To uninstall `Install-MPCJF-HiddenProtocol.ps1` : run in Powershell :
      ```
      Remove-Item -Recurse -Force "HKCU:\Software\Classes\MPCJF" -ErrorAction SilentlyContinue
      Remove-Item -Recurse -Force (Join-Path $env:LOCALAPPDATA "MPCJF") -ErrorAction SilentlyContinue
      ```
-- The .js userscript can be put in Jellyfin JavaScript Injector plugin instead, but every play buttons in Jellyfin Web won't work anywhere else without the .ps1 and MPC-JF.
-- If you use the Firefox extension ``` Dark Reader ``` , it breaks Jellyfin pictures loading in browsers, desactivate it only for jellyfin : Go into Dark Reader settings while you have the Jellyfin page open (firefox menu bar), click to uncheck Jellyfin URL.
-- Here there is my guide with many quality-of-life improvements for using Jellyfin without in your Web browser (fullscreen, shortcut links, auto-start server, etc.) : [PPFJ](https://github.com/Damocles-fr/PPJF/)
+- The .js userscript can be put in Jellyfin JavaScript Injector plugin instead, but every play buttons in Jellyfin Web won't work anywhere else without MPC and MPC-JF.
+- If you use the Firefox extension ``` Dark Reader ``` , it breaks Jellyfin pictures loading in browsers, desactivate it only for jellyfin : Go into Dark Reader settings while you have the Jellyfin page open (firefox menu bar), click to  Jellyfin URL.
+- Here there is my guide with many quality-of-life improvements for using Jellyfin in a Web browser (auto-start server, fullscreen UI, shortcuts folders links, etc.) : [PPFJ](https://github.com/Damocles-fr/PPJF/)
 
 ---
 

@@ -1,5 +1,6 @@
 # MPC-JF ▸ External media player for Jellyfin Web
-### MPC-BE & MPC-HC & Potplayer Support, may support other media players .exe by following step #2
+### ▸ MPC-BE & MPC-HC & Potplayer Support, may support other media players .exe by following step #2
+### ▸ Tested with Jellyfin 10.11+, local or NAS JF server, Windows 11, Jellyfin Web UI on Firefox-based or Chrome-based browsers
 ## Installation Steps
 
 ### 0. Download MPC-JF.zip
@@ -19,8 +20,8 @@ Download **latest for Jellyfin 10.11.+** : [MPC-JF.zip](https://github.com/Damoc
 ### 3. Install ViolentMonkey
 - In your web browser, install ViolentMonkey extension :
 https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
-###### Alternatively you can use TamperMonkey or any userscript extension
-###### MPCJF.js can be put in Jellyfin JavaScript Injector plugin instead, but every play buttons in Jellyfin Web won't work anywhere else without MPC-JF.
+	###### Alternatively you can use TamperMonkey or any userscript extension
+	###### MPCJF.js can be put in Jellyfin JavaScript Injector plugin instead, but every play buttons in Jellyfin Web won't work anywhere else without MPC-JF.
 
 ### 4. Install MPCJF.js userscript in ViolentMonkey
 - Install MPCJF.js into ViolentMonkey, one-click install with auto-update : [MPCJF.js Userscript](https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPCJF.js)
@@ -28,9 +29,9 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
   ```
   // @match        http://192.168.1.10:8096/*
   ```
-#### Don't forget the * at the end.
-##### If you did any change, Uncheck Allow Updates & Allow Modification so you don't have to do it again if I update this script.
-###### To find and modify the installed `MPCJF.js` Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** > ***`</>`***
+	##### - Don't forget the * at the end.
+	##### - If you did any change, Uncheck Allow Updates & Allow Modification so you don't have to do it again if I update this script.
+	###### To find and modify the installed `MPCJF.js` Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** > ***`</>`***
 
 ### 5. Enable PowerShell Scripts Execution to allow MPCJF.ps1
 - In Windows 11, go to, Settings → Developers → PowerShell → Allow unsigned scripts

@@ -20,7 +20,7 @@ Download **latest for Jellyfin 10.11.+** : [MPC-JF.zip](https://github.com/Damoc
 - Edit the file `MPCJF.ps1` and replace the path ***in the last line*** with ***your own*** corresponding path. (MPC-HC or any other player path)
 - E.g. for PotPlayer default path : ``` & "C:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe" "`"$path`"" ```
 
-### 3. Installation for Web Browser (Recommended)
+### 3. Installation for Web Browser (optional but recommended)
 - In your web browser, install ViolentMonkey extension :
 https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 	###### Alternatively you can use TamperMonkey or any userscript extension

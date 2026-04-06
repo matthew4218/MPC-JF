@@ -75,7 +75,7 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 
 ### 7. Done !
 - Restart your web browser and/or refresh Jellyfin Web UI, test if it works already. If not, see Workaround below.
-###### For Jellyfin Media Player, it can take a feww restart and right click => refresh before it works.
+###### For Jellyfin Media Player, it can take a few restarts and right click => Reload before it works.
 
 ---
 

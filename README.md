@@ -1,4 +1,4 @@
-# MPC-JF ▸ External media player for Jellyfin Web
+# MPC-JF ▸ External player launcher for Jellyfin Web
 ### ▸ MPC-BE & MPC-HC & Potplayer Support, may support other media players .exe by following step #2
 ### ▸ Tested with Jellyfin 10.11+, local or NAS JF server, Windows 11, Jellyfin Web UI on Firefox-based or Chrome-based browsers
 ## Installation Steps

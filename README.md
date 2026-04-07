@@ -114,7 +114,7 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
      Remove-Item -Recurse -Force (Join-Path $env:LOCALAPPDATA "MPCJF") -ErrorAction SilentlyContinue
      ```
 - If you use the Firefox extension ``` Dark Reader ``` , it breaks Jellyfin pictures loading in browsers, desactivate it only for jellyfin : Go into Dark Reader settings while you have the Jellyfin page open (firefox menu bar), click to  Jellyfin URL.
-- Here is my guide with many **quality-of-life improvements** for using Jellyfin in a Web browser (auto-start server, fullscreen UI, shortcuts folders links, etc.) : [PPFJ](https://github.com/Damocles-fr/PPJF/)
+- Here is my guide with many **quality-of-life improvements** for using Jellyfin in a Web browser (auto-start-stop server, fullscreen UI, shortcut links to media folders, etc.) : [PPFJ](https://github.com/Damocles-fr/PPJF/)
 
 ---
 

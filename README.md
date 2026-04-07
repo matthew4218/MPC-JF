@@ -7,7 +7,7 @@
 - Support **MPC-BE, MPC-HC, or PotPlayer** (and more ? Try with your own player **.exe**)
 - Support Jellyfin Web through userscript (Firefox or Chrome-based)
 - Support **Jellyfin Media Player** (JMP Desktop Windows App) with a DeviceId through JavaScript Injector
-- **Alternative version script** : add a new yellow icon to item pages, external player is only triggered from that icon
+- **Alternative version script** : add a new yellow Play button to the item pages, external player is only triggered from that icon
 
 ### 0. Download MPC-JF.zip
 Download **latest for Jellyfin 10.11.+** : [MPC-JF.zip](https://github.com/Damocles-fr/MPC-JF/releases/)

@@ -28,7 +28,7 @@ Download **latest for Jellyfin 10.11.+** : [MPC-JF.zip](https://github.com/Damoc
 https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 	###### Alternatively you can use TamperMonkey or any userscript extension
 - Install MPCJF.user.js (replace all playing functions), one-click install with auto-update : [MPCJF.user.js](https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPCJF.user.js)
-- Alternative : MPCJFicon.user.js (add a new yellow icon to item pages, external player is only triggered from that icon), one-click install with auto-update : [MPCJFicon.user.js](https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPCJFicon.user.js)
+- Alternative : MPCJFicon.user.js (add a new yellow Play button to the item pages, external player is only triggered from that icon), one-click install with auto-update : [MPCJFicon.user.js](https://raw.githubusercontent.com/Damocles-fr/MPC-JF/refs/heads/main/MPCJFicon.user.js)
 - If your Jellyfin Server is not set the default adress ``` http://localhost:8096/ ``` : Select **Modify** to replace ``` http://localhost:8096/ ``` with your Jellyfin web URL, for exemple :
   ```
   // @match        http://192.168.1.10:8096/*

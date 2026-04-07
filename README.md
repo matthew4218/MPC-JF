@@ -95,7 +95,6 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
   	- Replace "D:" with the corresponding drive letter in Windows.
   	- For exemple ``` $path = $path -replace "\\share\\MEDIA\\", "D:" ```
 	That works for everything located in my NAS mounted as the D: drive in Windows, so D:\FILMS, D:\SERIES, D:\FILMS\folder1\Movie1.mkv etc.
-	``` "\\share\\\MEDIA\\" ``` depends of your NAS/drives configuration (see your NAS and Jellyfin library path to identify your issue)
   	- If you have other drives, do the same for them by adding lines below.
   	- No need to do add lines for every library folder, just one line for each different drive should be enough.
 

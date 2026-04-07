@@ -66,7 +66,7 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
      ```
 ### 6. Apply MPC-JF Registry Settings
 - Run `MPCJF.reg` and confirm changes.
-- You may need to re-run `MPCJF.reg` after major MPC Updates.
+- You may need to re-run `MPCJF.reg` after major Media Player Updates.
 
 ### Optional :  Hide the Powerscript window at MPC-JF launch
 - `Install-MPCJF-HiddenProtocol.ps1` must be in your default MPC-JF folder.

@@ -12,7 +12,7 @@
 #### Requirements & limitations :
 - Your media folders HDDs/NAS/network drives must be mounted with a letter in Windows (D:\ E:\ ...)
 - Watched states are not synced.
-#### ▶︎ **Re-run** `MPCJF.reg` (& `Install-MPCJF-HiddenProtocol.ps1`) after new Media Player/MPC/Potplayer update 
+#### ▶︎ **Re-run** `MPCJF.reg` (& `Install-MPCJF-HiddenProtocol.ps1`) after a new Media Player/MPC/Potplayer update 
 
 ## Installation
 
@@ -108,7 +108,7 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 ---
 
 ### TIPS :
-- **Re-run** `MPCJF.reg` (& `Install-MPCJF-HiddenProtocol.ps1`) after new Media Player/MPC/Potplayer update 
+- **Re-run** `MPCJF.reg` (& `Install-MPCJF-HiddenProtocol.ps1`) after a new Media Player/MPC/Potplayer update 
 - You will have to checkmark the media as watched in Jellyfin yourself...
 - To Resume watching the last media, set your Player settings to resume the last file automatically at openning (and open the player instead of jellyfin to resume).
 - If you change your server adress : modify the installed **MPCJF** userscript : Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** → MPC-JF ***`</>`***

